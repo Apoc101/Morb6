@@ -14,14 +14,11 @@ bot = discord.Client()
 # check for event (ready)
 @bot.event
 async def on_ready():
-	guild_count = 0
-
-	for guild in bot.guilds:
-		print(f"- {guild.id} (name: {guild.name})")
-
-		guild_count = guild_count + 1
-    # print n of discord servers the bot is in (acts as a pseudo-"ready")
-	print("Morb6 is in " + str(guild_count) + " guilds.")
+    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name='The Boys'))
+    
+    print('Connected to bot: {}'.format(bot.user.name))
+    print('Bot ID: {}'.format(bot.user.id))
+    
 # prints the amount of days morbius has been out just in case
 today = datetime.date.today()
 morbius = datetime.date(2022, 3, 31)
