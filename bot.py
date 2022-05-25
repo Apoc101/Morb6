@@ -14,7 +14,7 @@ bot = discord.Client()
 # check for event (ready)
 @bot.event
 async def on_ready():
-    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name='The Boys'))
+    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name='Morbius'))
     
     print('Connected to bot: {}'.format(bot.user.name))
     print('Bot ID: {}'.format(bot.user.id))
