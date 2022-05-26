@@ -43,7 +43,7 @@ async def cornjob1():
     chs = [ch1, ch2]
     for x in chs:
         # async function completion: send string in bot's contexted channel
-        await ch1.send('Its morbin time, it has been ' + str(diff.days) + ' days since Morbius released.')
+        await x.send('Its morbin time, it has been ' + str(diff.days) + ' days since Morbius released.')
 
 # run the bot with the dotenv-provided token
 bot.run(DISCORD_TOKEN)
