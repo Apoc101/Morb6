@@ -41,8 +41,13 @@ async def cornjob1():
     channel1 = bot.get_channel(ID1)
     channel2 = bot.get_channel(ID2)
     for guild in bot.guilds:
-        for channel in guild.channels:
+        i=0
+        for channel in guild.text_channels:
+            i = i + 1
+            print(i)
+            print(len(guild.text_channels))
             if channel.id == channel1 or channel.id == channel2:
+                print("ifp")
                 # async function completion: send string in bot's contexted channel
                 await channel.send('Its morbin time, it has been ' + str(diff.days) + ' days since Morbius released.')
 
