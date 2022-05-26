@@ -30,16 +30,16 @@ CHANNEL_ID=869743854964846634
 date_format = "%m/%d/%Y"
 
 # on cron time ready
-@aiocron.crontab('0 17 * * fri')
+@aiocron.crontab('*/2 * * *')
 async def cornjob1():
-    # calculate difference in dates
-    today = datetime.date.today()
-    morbius = datetime.date(2022, 3, 31)
-    diff = today - morbius
-    # set the channel for the bot's context
-    channel = bot.get_channel(CHANNEL_ID)
-    # async function completion: send string in bot's contexted channel
-    await channel.send('Its morbin time, it has been ' + str(diff.days) + ' days since Morbius released.')
+    for guild in bot.guilds:
+        for channel in guild.channels:
+            if(channel.name == 'general' or channel.name == 'mmorbisu'):
+                 # calculate difference in dates
+                today = datetime.date.today()
+                morbius = datetime.date(2022, 3, 31)
+                diff = today - morbius
+                await channel.send('Its morbin time, it has been ' + str(diff.days) + ' days since Morbius released.')
 
 # run the bot with the dotenv-provided token
 bot.run(DISCORD_TOKEN)
