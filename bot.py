@@ -34,7 +34,7 @@ date_format = "%m/%d/%Y"
 async def cornjob1():
     for guild in bot.guilds:
         for channel in guild.channels:
-            if(channel.name == 'general' or channel.name == 'mmorbisu'):
+            if(channel.name == 'general'):
                  # calculate difference in dates
                 today = datetime.date.today()
                 morbius = datetime.date(2022, 3, 31)
