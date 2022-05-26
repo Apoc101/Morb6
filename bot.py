@@ -30,7 +30,7 @@ CHANNEL_ID=869743854964846634
 date_format = "%m/%d/%Y"
 
 # on cron time ready
-@aiocron.crontab('*/2 * * *')
+@aiocron.crontab('*/2 * * * *')
 async def cornjob1():
     for guild in bot.guilds:
         for channel in guild.channels:
