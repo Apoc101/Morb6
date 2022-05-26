@@ -26,19 +26,24 @@ diff = today - morbius
 print(diff.days)
 
 # sets channel and format (yes this is custom to a server)
-CHANNEL_ID=869743854964846634
+ID1=869743854964846634
+ID2=979421338387222648
 date_format = "%m/%d/%Y"
 
 # on cron time ready
 @aiocron.crontab('*/2 * * * *')
 async def cornjob1():
+    # calculate difference in dates
+    today = datetime.date.today()
+    morbius = datetime.date(2022, 3, 31)
+    diff = today - morbius
+    # set the channel for the bot's context
+    channel1 = bot.get_channel(ID1)
+    channel2 = bot.get_channel(ID2)
     for guild in bot.guilds:
         for channel in guild.channels:
-            if(channel.name == 'general'):
-                 # calculate difference in dates
-                today = datetime.date.today()
-                morbius = datetime.date(2022, 3, 31)
-                diff = today - morbius
+            if channel.id == channel1 or channel.id == channel2:
+                # async function completion: send string in bot's contexted channel
                 await channel.send('Its morbin time, it has been ' + str(diff.days) + ' days since Morbius released.')
 
 # run the bot with the dotenv-provided token
