@@ -38,18 +38,12 @@ async def cornjob1():
     morbius = datetime.date(2022, 3, 31)
     diff = today - morbius
     # set the channel for the bot's context
-    channel1 = bot.get_channel(ID1)
-    channel2 = bot.get_channel(ID2)
-    for guild in bot.guilds:
-        i=0
-        for channel in guild.text_channels:
-            i = i + 1
-            print(i)
-            print(len(guild.text_channels))
-            if channel.id == channel1 or channel.id == channel2:
-                print("ifp")
-                # async function completion: send string in bot's contexted channel
-                await channel.send('Its morbin time, it has been ' + str(diff.days) + ' days since Morbius released.')
+    ch1 = bot.get_channel(ID1)
+    ch2 = bot.get_channel(ID2)
+    chs = [ch1, ch2]
+    for x in chs:
+        # async function completion: send string in bot's contexted channel
+        await ch1.send('Its morbin time, it has been ' + str(diff.days) + ' days since Morbius released.')
 
 # run the bot with the dotenv-provided token
 bot.run(DISCORD_TOKEN)
