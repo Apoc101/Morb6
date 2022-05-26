@@ -31,7 +31,7 @@ ID2=979421338387222648
 date_format = "%m/%d/%Y"
 
 # on cron time ready
-@aiocron.crontab('*/2 * * * *')
+@aiocron.crontab('0 17 * * fri')
 async def cornjob1():
     # calculate difference in dates
     today = datetime.date.today()
