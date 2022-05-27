@@ -28,6 +28,7 @@ print(diff.days)
 # sets channel and format (yes this is custom to a server)
 ID1=869743854964846634
 ID2=979421338387222648
+ID3=898141938534981673
 date_format = "%m/%d/%Y"
 
 # on cron time ready
@@ -40,7 +41,8 @@ async def cornjob1():
     # set the channel for the bot's context
     ch1 = bot.get_channel(ID1)
     ch2 = bot.get_channel(ID2)
-    chs = [ch1, ch2]
+    ch3 = bot.get_channel(ID3)
+    chs = [ch1, ch2, ch3]
     for x in chs:
         # async function completion: send string in bot's contexted channel
         await x.send('Its morbin time, it has been ' + str(diff.days) + ' days since Morbius released.')
