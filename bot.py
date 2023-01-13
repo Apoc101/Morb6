@@ -60,7 +60,7 @@ async def cornjob1():
 
 # test command
 @bot.command()
-async def test(ctx):
+async def date(ctx):
     today = datetime.date.today()
     morbius = datetime.date(2022, 3, 31)
     diff = today - morbius
