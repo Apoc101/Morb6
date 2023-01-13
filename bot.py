@@ -8,9 +8,11 @@ from discord.ext import commands
 # load dotenv files from top directory
 load_dotenv()
 
+
 # get the token and instantiate the bot
 DISCORD_TOKEN = ""
 bot = commands.Bot(command_prefix='m!',intents=discord.Intents.all())
+
 
 # check for event (ready)
 @bot.event
