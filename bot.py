@@ -69,5 +69,11 @@ async def date(ctx):
     for x in chs:
         await bot.get_channel(int(x)).send('Its morbin time, it has been ' + str(diff.days) + ' days since Morbius released.')
 
+#nostalgia command
+@bot.command()
+async def nos(ctx):
+        await ctx.send('getting old')
+        await ctx.send('https://tenor.com/view/2007-was-5months-months-2007was5months-ago-gif-26534748')
+
 # run the bot with the dotenv-provided token
 bot.run(DISCORD_TOKEN)
