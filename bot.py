@@ -20,18 +20,6 @@ async def on_ready():
     print('Connected to bot: {}'.format(bot.user.name))
     print('Bot ID: {}'.format(bot.user.id))
     
-# ping command to check how bad heroku's hosting is
-@bot.command()
-async def ping(ctx):
-    await ctx.send(f'Pong! {round(bot.latency * 1000)}ms')
-
-
-# prints the amount of days morbius has been out just in case
-today = datetime.date.today()
-morbius = datetime.date(2022, 3, 31)
-diff = today - morbius
-print(diff.days)
-
 # sets channel and format (yes this is custom to a few servers)
 ID1=869743854964846634
 ID2=979421338387222648
