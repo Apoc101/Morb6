@@ -9,3 +9,9 @@ Why? Because I've always wanted to learn about scheduling and I finally had a re
 also it's a funny project
 
 If, for whatever reason, you want to host your instance of the bot just input the token into the `.env` file, install the required dependencies and then run `bot.py`
+
+## Possible improvements
+
+- Use a noSQL DB like Mongo instead of a .txt file to make scaling easier in case people *really* like the bot
+- Voice channel commands (pro)
+- Format the messages in a nicer way
