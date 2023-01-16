@@ -4,6 +4,7 @@
 
 Configurable Discord Bot that sends "it's morbin time" and the amount of days that have passed since Morbius released every Friday at 5pm UTC.
 
-Why? Because I've always found scheduling scary and I finally overcame this fear by learning about a nearly 50 year old scheduling method called [cron](https://en.wikipedia.org/wiki/Cron).
-Also, it was funny.
+Why? Because I've always wanted to learn about scheduling and I finally to do it, finding out about a nearly 50 year old scheduling method called [cron](https://en.wikipedia.org/wiki/Cron).
+Also, it's funny
 
+If, for whatever reason, you want to host your instance of the bot, just input the token into the `.env` file, install the required dependencies and run the `bot.py`
