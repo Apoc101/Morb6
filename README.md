@@ -6,7 +6,7 @@ Configurable Discord Bot that sends "it's morbin time" and the amount of days th
 
 Why'd we make this? Because I've always wanted to learn about scheduling and I finally had a reason to do it, discovering a nearly 50 year old scheduling method called [cron](https://en.wikipedia.org/wiki/Cron), and Phil came up with the idea in the first place so props to him 👍👍<br>
 
-If, for whatever reason, you want to host your instance of the bot just input the token into the `.env` file, install the required dependencies and then run `bot.py`
+If, for whatever reason, you want to host your instance of the bot just input the token into the `.env` file, install the required dependencies from  and then run `bot.py`
 
 ## Possible improvements
 
