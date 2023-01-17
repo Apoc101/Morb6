@@ -45,8 +45,10 @@ async def WTTF(chID, ctx):
         if match == False:
             f.write(f'\n{chID}')
             await ctx.send(f'Succesfully added <#{chID}>.')
-        else: 
+        elif match == True: 
             await ctx.send(f'<#{chID}> is already in our database!')
+        else:
+            await ctx.send("There was an error in adding this channel. Open an issue through the GitHub page in my bio.")
 
 
 # -------------
